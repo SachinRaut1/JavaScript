@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Rows</title>
+</head>
+<body>
+    <div class="test">
+        <input type="number" name="input1" id="input1"/><br>
+        <input type="number" name="input2" id="input2"/><br>
+        <input type="text" name="value" id="value" readonly/><br>
+        <button type="button" class="add-button" onclick="addNewRow()">Add Row</button>
+    </div>
+    <script>
+    const addNewRow = () => {
+        // Create the new row content
+        const inputRow = '<input type="text" name="newRow" value="test" readonly/><br>';
+        
+        // Select the first element with class "test"
+        const divSelector = document.getElementsByClassName('test')[0];
+
+        // Append the new row to the existing HTML
+        divSelector.innerHTML += inputRow;
+    };
+    </script>
+</body>
+</html>
